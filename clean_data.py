@@ -1,4 +1,5 @@
 from load_data import dataset
+from datasets import Dataset
 
 
 data = dataset["train"]
@@ -28,6 +29,8 @@ for example in data :
         clean_examples.append(clean_example)
 
 print("cleaned_example",clean_examples[0])
-        
-    
+
+
+clean_dataset = Dataset.from_list(clean_examples)
+print(clean_dataset)
     
